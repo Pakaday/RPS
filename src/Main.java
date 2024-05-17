@@ -5,14 +5,15 @@ class Main{
     public static void main(String[] args){
         boolean endApp = false;
         Random randChoice = new Random();
+        Scanner choiceInput = new Scanner(System.in);//Make 1 Scanner object for all input
 
         do{
             int numRounds = 0;
             do {
                 System.out.println("Let's play Rock, Paper, Scissors!\n");
                 System.out.print("Choose number of rounds: ");
-                Scanner myObj = new Scanner(System.in);//This is how Java handles user input
-                String input = myObj.nextLine();//Part Two of Java user input
+//                Scanner choiceInput = new Scanner(System.in);//This is how Java handles user input
+                String input = choiceInput.nextLine();//Part Two of Java user input
                 try {
                     numRounds = Integer.parseInt(input);
                     if (numRounds <= 0) {
@@ -27,7 +28,7 @@ class Main{
             int computerScore = 0;
 
             for (int round = 1; round <= numRounds; round++){
-                Scanner choiceInput = new Scanner(System.in);
+//                Scanner choiceInput = new Scanner(System.in);
                 String choiceInputUpper = choiceInput.nextLine();
                 String choiceInputUpperCase = choiceInputUpper.toUpperCase();
                 String[] choices = {"R", "P", "S"};
@@ -39,8 +40,8 @@ class Main{
                     System.out.println("\tP - Paper");
                     System.out.println("\tS - Scissors");
                     System.out.println("What is your choice? ");
-                    Scanner chooseInput = new Scanner(System.in);
-                    String input = chooseInput.nextLine();
+//                    Scanner chooseInput = new Scanner(System.in);
+                    String input = choiceInput.nextLine();
                     String inputUpperCase = input.toUpperCase();//To convert input to Uppercase
                     System.out.println("Your choice is: " + inputUpperCase);
                     System.out.println("Computer chose: " + computerChoice);
@@ -76,8 +77,8 @@ class Main{
             }
 
             System.out.println("Would you like to play again? Y(es)\\N(o)\n");
-            Scanner choice = new Scanner(System.in);
-            String userChoice = choice.nextLine();
+//            Scanner choice = new Scanner(System.in);
+            String userChoice = choiceInput.nextLine();
             System.out.println(userChoice);
             if (userChoice.equals("N"))
                 endApp = true;

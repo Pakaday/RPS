@@ -12,8 +12,7 @@ class Main{
             do {
                 System.out.println("Let's play Rock, Paper, Scissors!\n");
                 System.out.print("Choose number of rounds: ");
-//                Scanner choiceInput = new Scanner(System.in);//This is how Java handles user input
-                String input = choiceInput.nextLine();//Part Two of Java user input
+                String input = choiceInput.nextLine();//User input from Scanner 
                 try {
                     numRounds = Integer.parseInt(input);
                     if (numRounds <= 0) {
@@ -28,9 +27,7 @@ class Main{
             int computerScore = 0;
 
             for (int round = 1; round <= numRounds; round++){
-//                Scanner choiceInput = new Scanner(System.in);
-                String choiceInputUpper = choiceInput.nextLine();
-                String choiceInputUpperCase = choiceInputUpper.toUpperCase();
+                String playerChoice = "";
                 String[] choices = {"R", "P", "S"};
                 String computerChoice = choices[randChoice.nextInt(choices.length)];
 
@@ -40,18 +37,16 @@ class Main{
                     System.out.println("\tP - Paper");
                     System.out.println("\tS - Scissors");
                     System.out.println("What is your choice? ");
-//                    Scanner chooseInput = new Scanner(System.in);
-                    String input = choiceInput.nextLine();
-                    String inputUpperCase = input.toUpperCase();//To convert input to Uppercase
-                    System.out.println("Your choice is: " + inputUpperCase);
+                    playerChoice = choiceInput.nextLine().toUpperCase();
+                    System.out.println("Your choice is: " + playerChoice);
                     System.out.println("Computer chose: " + computerChoice);
                     System.out.println("\n");
 
-                    if (!inputUpperCase.equals("R") && !inputUpperCase.equals("P") && !inputUpperCase.equals("S")){//How Java handles does or does not equal to option
+                    if (!playerChoice.equals("R") && !playerChoice.equals("P") && !playerChoice.equals("S")){//How Java handles does or does not equal to option
                         System.out.println("You must choose either R, P or S!\n");
                     }
                 }
-                while (!choiceInputUpperCase.equals("R") && !choiceInputUpperCase.equals("P") && !choiceInputUpperCase.equals("S"));
+                while (!playerChoice.equals("R") && !playerChoice.equals("P") && !playerChoice.equals("S"));
 
                 String result = Winner(choiceInput, computerChoice);
                 System.out.println(result);
@@ -80,9 +75,11 @@ class Main{
 //            Scanner choice = new Scanner(System.in);
             String userChoice = choiceInput.nextLine();
             System.out.println(userChoice);
-            if (userChoice.equals("N"))
+            if (userChoice.equalsIgnoreCase("N"))//IgnoreCase will accept lower and upper
                 endApp = true;
         } while (!endApp);
+
+        choiceInput.close();
     }
 
     public static String Winner(Scanner choiceInput, String computerChoice){

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9591055-67f4-468d-b63b-2e6f5ba2ed11" name="Changes" comment="Converting C# Rock, Paper, Scissors game into Java">
+    <list default="true" id="e9591055-67f4-468d-b63b-2e6f5ba2ed11" name="Changes" comment="Make 1 Scanner object for all input">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -75,11 +75,20 @@
       <option name="project" value="LOCAL" />
       <updated>1715958076890</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Make 1 Scanner object for all input">
+      <option name="closed" value="true" />
+      <created>1715965565673</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1715965565673</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Converting C# Rock, Paper, Scissors game into Java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Converting C# Rock, Paper, Scissors game into Java" />
+    <MESSAGE value="Make 1 Scanner object for all input" />
+    <option name="LAST_COMMIT_MESSAGE" value="Make 1 Scanner object for all input" />
   </component>
 </project>
